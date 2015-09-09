@@ -16,12 +16,24 @@ c_list() { echo -e "  \033[1;32m✔\033[0m $1"; }
 # Error list item
 e_list() { echo -e "  \033[1;31m✖\033[0m $1"; }
 
+# Check for dependency
+dep() {
+ type -p $1 &> /dev/null
+ local installed=$?
+ if [ $installed -eq 0 ]; then
+   c_list $1
+ else
+   e_list $1
+ fi
+ return $installed
+ }
+                     
 backup() {
   mkdir -p $backupdir
 
   local files=( $(ls -a) )
   for file in "${files[@]}"; do
-    in_array $file "${excluded[@]}" || cp -Rf "$HOME/$file" "$backupdir/$file"
+    in_array $file "${excluded[@]}" || if [[ $file == "."* ]]; then cp -Rf "$HOME/$file" "$backupdir/$file"; fi
   done
 }
 
@@ -52,7 +64,28 @@ in_array() {
 #-----------------------------------------------------------------------------
 
 backupdir="$HOME/.dotfiles-backup/$(date "+%Y%m%d%H%M.%S")"
+dependencies=(git vim)
 excluded=(. .. .git .gitignore .gitmodules bootstrap.sh README.md .osx)
+
+
+#-----------------------------------------------------------------------------
+# Dependencies
+# #-----------------------------------------------------------------------------
+#
+notice "Checking dependencies"
+
+not_met=0
+for need in "${dependencies[@]}"; do
+  dep $need
+  met=$?
+  not_met=$(echo "$not_met + $met" | bc)
+done
+
+if [ $not_met -gt 0 ]; then
+  error "$not_met dependencies not met!"
+  exit 1
+fi
+
 
 #-----------------------------------------------------------------------------
 # Install
