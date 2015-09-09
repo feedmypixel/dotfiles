@@ -1,0 +1,14 @@
+# Dir navigation
+alias ..="cd .."
+alias ~="cd ~"
+alias -- -="cd -"
+alias ls='ls -la'
+alias ll='ls -alF'
+alias work='cd ~/Sites/'
+
+# Utilities
+alias g="git"
+alias grep='GREP_COLOR="1;37;45" LANG=C grep --color=auto'
+alias h="history"
+alias show='defaults write com.apple.finder AppleShowAllFiles -boolean true; killall Finder'
+alias hide='defaults write com.apple.finder AppleShowAllFiles -boolean false; killall Finder'

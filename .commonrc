@@ -1,0 +1,8 @@
+# Load things
+[[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
+
+# Misc settings
+export EDITOR=vim
+
+# rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
