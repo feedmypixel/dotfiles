@@ -26,7 +26,7 @@ Optional, but recommended:
 Bits and bobs have been used from:
 - [gf3](https://github.com/gf3/dotfiles/tree/v1.0.0)
 - [mathiasbynens](https://github.com/mathiasbynens/dotfiles)
-
+- [dougblack](http://dougblack.io/words/a-good-vimrc.html)
 
 <a name="bootstrap">
 ## Bootstrapper
