@@ -4,7 +4,7 @@ alias ~="cd ~"
 alias -- -="cd -"
 alias ls='ls -la'
 alias ll='ls -alF'
-alias work='cd ~/Sites/'
+alias work='cd ~/Work/'
 
 # Utilities
 alias g="git"
@@ -12,3 +12,18 @@ alias grep='GREP_COLOR="1;37;45" LANG=C grep --color=auto'
 alias h="history"
 alias show='defaults write com.apple.finder AppleShowAllFiles -boolean true; killall Finder'
 alias hide='defaults write com.apple.finder AppleShowAllFiles -boolean false; killall Finder'
+
+# git add keys, add keys for github and internal HMRC github
+gak () {
+  if [ -f ~/.ssh/id_rsa ]; then
+     ssh-add ~/.ssh/id_rsa
+  fi
+   
+  if [ -f ~/.ssh/id_rsa_hmrc ]; then
+     ssh-add ~/.ssh/id_rsa_hmrc
+  fi
+}
+
+# remove local branches that have not been remote merged
+alias gpb='git branch -r --merged | grep -v "\*" | grep -v "master" | xargs -n 1 git branch -d'
+
