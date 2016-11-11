@@ -12,6 +12,7 @@ alias grep='GREP_COLOR="1;37;45" LANG=C grep --color=auto'
 alias h="history"
 alias show='defaults write com.apple.finder AppleShowAllFiles -boolean true; killall Finder'
 alias hide='defaults write com.apple.finder AppleShowAllFiles -boolean false; killall Finder'
+alias serve='python -m SimpleHTTPServer 8000'
 
 # git add keys, add keys for github and internal HMRC github
 gak () {
