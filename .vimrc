@@ -22,3 +22,4 @@ set backspace=indent,eol,start
 set title
 set scrolloff=3
 set history=1000
+au FileType gitcommit set tw=72
