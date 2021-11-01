@@ -65,7 +65,7 @@ in_array() {
 
 backupdir="$HOME/.dotfiles-backup/$(date "+%Y%m%d%H%M.%S")"
 dependencies=(git vim)
-excluded=(. .. .git .gitignore .gitmodules bootstrap.sh README.md .osx)
+excluded=(. .. .git .gitignore .gitmodules bootstrap.sh README.md .macos)
 
 
 #-----------------------------------------------------------------------------
