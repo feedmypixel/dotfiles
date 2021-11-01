@@ -3,6 +3,7 @@
 ### Table of Contents
 - [Dependencies](#dependencies)
 - [Thanks](#thanks)
+- [Using Git and the bootstrap script](#using-git-and-the-bootstrap-script
 - [Bootstrap](#bootstrap)
 - [Update](#update)
 - [Shell](#shell)
@@ -24,6 +25,25 @@ Bits and bobs have been used from:
 - [gf3](https://github.com/gf3/dotfiles/tree/v1.0.0)
 - [mathiasbynens](https://github.com/mathiasbynens/dotfiles)
 - [dougblack](http://dougblack.io/words/a-good-vimrc.html)
+
+## Using Git and the bootstrap script
+
+You can clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`, with `~/dotfiles` as a symlink.) 
+```bash
+ln -s /Projects/dotfiles /dotfiles
+```
+
+The bootstrapper script will pull in the latest version and copy the files to your home folder.
+
+```bash
+git clone https://github.com/mathiasbynens/dotfiles.git && cd dotfiles && source bootstrap.sh
+```
+
+To update, `cd` into your local `dotfiles` repository and then:
+
+```bash
+source bootstrap.sh
+```
 
 ## Bootstrapper
 The bootstrapper will back up all your existing files before it installs anything new. Don't worry, all your old files will be backed up!
