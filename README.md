@@ -49,10 +49,10 @@ Check out [.aliases](.aliases)
 Handy git script additions as well as config changes.
 Have a look at [.gitconfig](.gitconfig) to see various aliases and settings.
 
-## Osx
-Sensible Osx setup [.osx](.osx)
+## Sensible macOS defaults
+Sensible macOx setup [.macos](.macos)
 ```
-./.osx
+./.macos
 ```
 
 ## Homebrew
