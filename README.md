@@ -3,7 +3,7 @@
 ### Table of Contents
 - [Dependencies](#dependencies)
 - [Thanks](#thanks)
-- [Using Git and the bootstrap script](#using-git-and-the-bootstrap-script
+- [Using Git and the bootstrap script](#using-git-and-the-bootstrap-script)
 - [Bootstrap](#bootstrap)
 - [Update](#update)
 - [Shell](#shell)
