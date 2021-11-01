@@ -5,6 +5,7 @@ alias -- -="cd -"
 alias ls='ls -la'
 alias ll='ls -alF'
 alias work='cd ~/Work/'
+alias projects='cd ~/Projects/'
 alias ij='open -a /Applications/IntelliJ\ IDEA.app'
 
 # Utilities
