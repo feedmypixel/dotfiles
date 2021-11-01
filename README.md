@@ -8,7 +8,7 @@
 - [Shell](#shell)
 - [Alias](#alias)
 - [Git](#git)
-- [Osx](#osx)
+- [Macos](#macos)
 - [Homebrew](#homebrew)
 
 ## Dependencies
