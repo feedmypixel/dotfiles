@@ -55,7 +55,7 @@ Check out [.aliases](.aliases)
 Handy git script additions as well as config changes.
 Have a look at [.gitconfig](.gitconfig) to see various aliases and settings.
 
-## Sensible macOS defaults
+## macOS
 Sensible macOx setup [.macos](.macos)
 ```
 ./.macos
