@@ -29,7 +29,8 @@ Bits and bobs have been used from:
 
 You can clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`, with `~/dotfiles` as a symlink.) 
 ```bash
-ln -s /Projects/dotfiles /dotfiles
+cd ~
+ln -s /Users/<username>/Projects/dotfiles ~
 ```
 
 The bootstrapper script will pull in the latest version and copy the files to your home folder. The bootstrapper will back up all your existing files before it installs anything new. Don't worry, all your old files will be backed up!
