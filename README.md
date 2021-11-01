@@ -4,7 +4,6 @@
 - [Dependencies](#dependencies)
 - [Thanks](#thanks)
 - [Using Git and the bootstrap script](#using-git-and-the-bootstrap-script)
-- [Bootstrap](#bootstrap)
 - [Update](#update)
 - [Shell](#shell)
 - [Alias](#alias)
@@ -33,7 +32,7 @@ You can clone the repository wherever you want. (I like to keep it in `~/Project
 ln -s /Projects/dotfiles /dotfiles
 ```
 
-The bootstrapper script will pull in the latest version and copy the files to your home folder.
+The bootstrapper script will pull in the latest version and copy the files to your home folder. The bootstrapper will back up all your existing files before it installs anything new. Don't worry, all your old files will be backed up!
 
 ```bash
 git clone https://github.com/mathiasbynens/dotfiles.git && cd dotfiles && source bootstrap.sh
@@ -43,20 +42,6 @@ To update, `cd` into your local `dotfiles` repository and then:
 
 ```bash
 source bootstrap.sh
-```
-
-## Bootstrapper
-The bootstrapper will back up all your existing files before it installs anything new. Don't worry, all your old files will be backed up!
-
-``` bash-session
-$ bash < <( curl https://raw.githubusercontent.com/feedmypixel/dotfiles/master/bootstrap.sh )
-```
-
-## Stay Updated
-Run the bootstrapper again!
-
-``` bash-session
-$ ~/.dotfiles/bootstrap.sh
 ```
 
 ## Shell
