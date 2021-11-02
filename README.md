@@ -39,10 +39,11 @@ The bootstrapper script will pull in the latest version and copy the files to yo
 git clone https://github.com/mathiasbynens/dotfiles.git && cd dotfiles && source bootstrap.sh
 ```
 
-To update, `cd` into your local `dotfiles` repository and then:
+To update, `cd` into root and run:
 
 ```bash
-source bootstrap.sh
+cd ~
+~/.dotfiles/bootstrap.sh
 ```
 
 ## Shell
