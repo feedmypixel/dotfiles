@@ -1,7 +1,7 @@
 # Dir navigation
-alias ..="cd .."
-alias ~="cd ~"
-alias -- -="cd -"
+alias ..='cd ..'
+alias ~='cd ~'
+alias -- -='cd -'
 alias ls='ls -la'
 alias ll='ls -alF'
 alias work='cd ~/Work/'
@@ -20,14 +20,12 @@ alias show='defaults write com.apple.finder AppleShowAllFiles -boolean true; kil
 alias hide='defaults write com.apple.finder AppleShowAllFiles -boolean false; killall Finder'
 alias serve='python -m SimpleHTTPServer 8000'
 
-# git add keys, add keys for github and internal HMRC github
+alias keys='ssh-add -l'
+
+# git add keys, add keys for github
 gak () {
   if [ -f ~/.ssh/id_rsa ]; then
      ssh-add ~/.ssh/id_rsa
-  fi
-
-  if [ -f ~/.ssh/id_rsa_hmrc ]; then
-     ssh-add ~/.ssh/id_rsa_hmrc
   fi
 }
 
